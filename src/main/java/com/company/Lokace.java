@@ -81,6 +81,6 @@ public class Lokace {
     }
 
     public String serialize () {
-        return "Lokace(" + this.povoleneAkce + "," + this.bytost + "," + this.predmety + ")";
+        return "-" + this.povoleneAkce + "," + this.bytost + "," + this.predmety + ";";
     }
 }

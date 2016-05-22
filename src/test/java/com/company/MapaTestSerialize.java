@@ -6,7 +6,7 @@ import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 /**
  * Created by TIBOR on 22.5.2016.
  */
-public class MapaTest {
+public class MapaTestSerialize {
 
     @Test
 
@@ -16,7 +16,7 @@ public class MapaTest {
         Hrdina hrdina = new Hrdina();
         Mapa mapa = new Mapa(hrdina);
 
-        String result = mapa.serialize(mapa.aktualniPozice);
+        String result = mapa.serialize();
         System.out.println(result);
     }
 }

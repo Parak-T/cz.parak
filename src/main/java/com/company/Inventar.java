@@ -37,5 +37,9 @@ public class Inventar {
         return predmety.contains(vec);
     }
 
+    public String serialize () {
+        return "Inventar-" + this.predmety;
+    }
+
 }
 

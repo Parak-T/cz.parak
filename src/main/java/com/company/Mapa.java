@@ -115,7 +115,7 @@ public class Mapa {
         this.aktualniPozice = aktualniPozice;
     }
 
-    public String serialize (Pozice aktualniPozice) {
+    public String serialize () {
         String result = "";
 
         for(Map.Entry<Pozice, Lokace> entry: povoleneLokace.entrySet()) {//for cyklus na klasu Entry zanořenou do třídy Map, <Kye, Value>

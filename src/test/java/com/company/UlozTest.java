@@ -9,8 +9,9 @@ import org.junit.Test;
 public class UlozTest {
     @Test
     public void testUloz() throws Exception {
-        Uloz ulozTest = new Uloz();
-        ulozTest.proved(new String[]{"ulož"});
+        Hrdina hrdina = new Hrdina();
+        Uloz ulozTest = new Uloz(new Mapa(hrdina), new Hrdina());
+        ulozTest.proved(new String[]{"ulož","ulozTest"});
 
     }
 }
