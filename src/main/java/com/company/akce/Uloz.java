@@ -20,7 +20,7 @@ public class Uloz extends Akce {
     public void proved(String[] parametry) {
         try {
             FileWriter fw = new FileWriter(parametry [1] + ".txt");
-            fw.append(); //do závorky napsat co se má psát do .txt
+            fw.append(""); //do závorky napsat co se má psát do .txt
 
         } catch (Exception E) {
             E.printStackTrace();
