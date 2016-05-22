@@ -9,6 +9,7 @@ import com.company.akce.Zvedni;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by TIBOR on 14.2.2016.
@@ -116,8 +117,10 @@ public class Mapa {
 
     public String serialize (Pozice aktualniPozice) {
         String result = "";
-        for(Lokace lokace: povoleneLokace.values()) {
-            result += lokace.serialize();
+
+        for(Map.Entry<Pozice, Lokace> entry: povoleneLokace.entrySet()) {//for cyklus na klasu Entry zanořenou do třídy Map, <Kye, Value>
+            result += entry.getKey().serialize();
+            result += entry.getValue().serialize();
         }
         result += "\n" + aktualniPozice.serialize();
         return  result;
