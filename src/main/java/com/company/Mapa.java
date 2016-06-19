@@ -122,7 +122,7 @@ public class Mapa {
             result += entry.getKey().serialize();
             result += entry.getValue().serialize();
         }
-        result += "\n" + aktualniPozice.serialize();
+        result += "aktual- " + aktualniPozice.serialize();
         return  result;
     }
 

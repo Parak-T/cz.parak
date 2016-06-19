@@ -14,10 +14,12 @@ public class DateServer {
 
     public static void main(String[] args) throws IOException {
         ServerSocket lisener = new ServerSocket(9090);
-        Socket socket = lisener.accept (); // Zavolám  metodu accept a uložím ho, bez acceptu se na serveru nic nestane.
-        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-        out.println(new Date().toString());
-        socket.close();
-
+        while (true) {
+            Socket socket = lisener.accept(); // Zavolám  metodu accept a uložím ho, bez acceptu se na serveru nic nestane.
+            System.out.println("Spojení přijato.");
+            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+            out.println(new Date().toString());
+            socket.close();
+        }
     }
 }

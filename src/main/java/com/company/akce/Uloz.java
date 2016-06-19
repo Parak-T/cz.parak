@@ -24,7 +24,7 @@ public class Uloz extends Akce {
         try {
 
             FileWriter fw = new FileWriter(parametry [1] + ".txt");
-            fw.append(mapa.serialize()+ "\n" + hrdina.serialize()); //do závorky napsat co se má psát do .txt
+            fw.append(mapa.serialize() + "\n" + hrdina.serialize()); //do závorky napsat co se má psát do .txt
             fw.flush();
             fw.close();
 

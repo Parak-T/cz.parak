@@ -13,11 +13,12 @@ public class DateServerTest {
 
     @Test
     public void testDateServer() throws Exception {
-        Socket outSocket = new Socket("localhost", 9090); //localhost je konvenční jméno pro IP tohoto počítače
-        BufferedReader in = new BufferedReader(new InputStreamReader(outSocket.getInputStream())); //zabalí příchozí data do celku
-        System.out.println(in.readLine());
+        for (int i = 0; i < 3; i++) {
+            Socket outSocket = new Socket("localhost", 9090); //localhost je konvenční jméno pro IP tohoto počítače
+            BufferedReader in = new BufferedReader(new InputStreamReader(outSocket.getInputStream())); //zabalí příchozí data do celku
+            System.out.println(in.readLine());
+        }
     }
-
 
 
 }

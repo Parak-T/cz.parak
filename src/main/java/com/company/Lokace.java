@@ -1,5 +1,6 @@
 package com.company;
 
+import javax.sound.sampled.Line;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +34,13 @@ public class Lokace {
         this.bytost = bytost;
         this.predmety = predmety;
     }
+
+    /*public Lokace(String[] deserializeLoad){
+                while (deserializeLoad.hasNextLine()) {
+            (line[0] = "lokace-")
+        }
+    }
+    */
 
     public boolean jdeProvest(String akce) {
         return povoleneAkce.contains(akce);
@@ -81,6 +89,8 @@ public class Lokace {
     }
 
     public String serialize () {
-        return "-" + this.povoleneAkce + "," + this.bytost + "," + this.predmety + ";";
+        return "- " +  this.povoleneAkce + "," + this.bytost + "," + this.predmety + ";" + "\n";
     }
+
+
 }

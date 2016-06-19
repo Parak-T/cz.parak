@@ -38,7 +38,7 @@ public class Inventar {
     }
 
     public String serialize () {
-        return "Inventar-" + this.predmety;
+        return "Inventar- " + this.predmety;
     }
 
 }

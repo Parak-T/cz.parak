@@ -49,6 +49,6 @@ public class Pozice {
     }
 
     public String serialize () {
-        return getX() + "," + getY();
+        return "lokace- " + getX() + "," + getY();
     }
 }
