@@ -89,7 +89,24 @@ public class Lokace {
     }
 
     public String serialize () {
-        return "- " +  this.povoleneAkce + "," + this.bytost + "," + this.predmety + ";" + "\n";
+        return "#" +  this.povoleneAkce + "#" + this.bytost + "#" + this.predmety + "\n";
+    }
+
+    public static Lokace deserialze (String lokace) {
+     String [] lokLine = lokace.split("#");
+       String [] poziceLine = lokLine [0].split(",");
+        Integer xx = Integer.parseInt(poziceLine [0]);
+        Integer yy = Integer.parseInt(poziceLine [1]);
+        new Pozice(xx, yy);
+
+        String [] akceLine = lokLine [1].split(", ");
+
+
+        String [] monstrumLine = lokLine [2].split(", ");
+
+        String [] lokaceLine = lokLine [3].split(", ");
+        //new Lokace()
+       return null;
     }
 
 

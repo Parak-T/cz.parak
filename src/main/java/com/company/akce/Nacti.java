@@ -1,6 +1,7 @@
 package com.company.akce;
 
 import com.company.Hrdina;
+import com.company.Lokace;
 import com.company.Mapa;
 
 import java.io.BufferedReader;
@@ -22,7 +23,7 @@ public class Nacti extends Akce {
             BufferedReader br = new BufferedReader(fr);
             StringBuffer result = new StringBuffer();
             br.lines()
-                    .forEach(line -> result.append(line));
+                    .forEach(line -> deserialize(line));
 
             System.out.println(result);
             br.close();
@@ -33,8 +34,10 @@ public class Nacti extends Akce {
 
     }
 
-    public void deserialize (){
-
+    public void deserialize (String line){ //line je jméno String j typ parametru
+        if(line.startsWith("lok-")) {
+            Lokace.deserialze(line);
+        }
     }
 
 }
